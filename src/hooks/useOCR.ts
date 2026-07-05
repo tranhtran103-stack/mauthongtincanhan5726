@@ -169,13 +169,13 @@ export function useOCR() {
         toast({
           title: 'Đã hủy',
           description: 'Quá trình xử lý ảnh đã bị hủy.',
-          variant: 'warning'
+          variant: 'destructive'
         });
       } else {
         toast({
           title: 'Hoàn tất',
           description: `Đã xử lý xong ${files.length} ảnh. (${completedCount} thành công, ${failedCount} lỗi)`,
-          variant: failedCount > 0 ? 'warning' : 'success'
+          variant: failedCount > 0 ? 'destructive' : 'success'
         });
       }
 
