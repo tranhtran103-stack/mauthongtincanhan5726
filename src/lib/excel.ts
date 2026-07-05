@@ -107,5 +107,5 @@ export async function generateExcelBuffer(data: ExcelRowData[]): Promise<Buffer>
 
   // Trả về Buffer
   const buffer = await workbook.xlsx.writeBuffer();
-  return buffer as Buffer;
+  return buffer as unknown as Buffer;
 }
