@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
     const filename = `cccd_data_${dateStr}.xlsx`;
 
     // Khởi tạo response với buffer và headers
-    const response = new NextResponse(buffer, {
+    const response = new NextResponse(buffer as unknown as BodyInit, {
       status: 200,
       headers: {
         'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
